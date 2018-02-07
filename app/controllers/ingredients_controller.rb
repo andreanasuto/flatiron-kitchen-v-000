@@ -8,6 +8,10 @@ class IngredientsController < ApplicationController
     @ingredient = Ingredient.find(params[:id])
   end
 
+  def edit
+    @ingredient = Ingredient.find(params[:id])
+  end
+
   def create
     @ingredient = Ingredient.create(ingredient_params)
     redirect_to ingredient_path(@ingredient)

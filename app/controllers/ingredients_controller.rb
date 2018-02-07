@@ -9,7 +9,7 @@ class IngredientsController < ApplicationController
   end
 
   def create
-    @ingredient = Ingredient.create(recipe_params)
+    @ingredient = Ingredient.create(ingredient_params)
   end
 
   def ingredient_params

@@ -12,7 +12,7 @@ class IngredientsController < ApplicationController
     @ingredient = Ingredient.create(recipe_params)
   end
 
-  def recipe_params
+  def ingredient_params
     params.require(:ingredient).permit(:name)
   end
 

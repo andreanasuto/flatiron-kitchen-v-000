@@ -5,7 +5,7 @@
   <%= f.collection_check_boxes :ingredient_ids, Ingredient.all, :id, :name %>
   <h2>Add a new ingredient:</h2>
   <%= f.fields_for :ingredients, @recipe.ingredients do |ingredient_attribute| %>
-    <%= ingredient.text_field :name %>
+    <%= ingredient_attribute.text_field :name %>
   <% end %>
   <%= f.submit %>
 <% end %>

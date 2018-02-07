@@ -3,5 +3,7 @@
   <%= f.text_field :name %>
   <h2>Select a ingredient:</h2>
   <%= f.collection_check_boxes :ingredient_ids, Ingredient.all, :id, :name %>
+  <h2>Add a new ingredient:</h2>
+  <%= f.fields_for :ingredients, @ingredient, 
   <%= f.submit %>
 <% end %>
